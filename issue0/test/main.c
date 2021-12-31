@@ -3,6 +3,9 @@
 #include "cpa_dev.h"
 #include "cpa_types.h"
 
+#include "cpa_fips_sample.h"
+#include "cpa_fips_sample_utils.h"
+
 int main(int argc, char *argv[])
 {
     // Get number of QAT devices
@@ -16,7 +19,12 @@ int main(int argc, char *argv[])
     } else {
         printf("Querying number of QAT devices.\n");
     } 
-    
+
+    const char *msg = "Test";
+    displayHexArray(msg,NULL,0);
+
+    isFbALessThanFbB(NULL,NULL);
+
     return 0;
 }
 
